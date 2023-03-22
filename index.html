@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>NFT Preview</title>
@@ -11,10 +14,254 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
 
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: hsl(217, 54%, 11%);
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .nft-card {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      width: 80%;
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 10px;
+    }
+
+    .card-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60%;
+      width: 100%;
+    }
+
+    .card-image {
+      height: 85%;
+      width: 85%;
+      border-radius: 8px;
+    }
+
+    .card-info-container {
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+      width: 100%;
+    }
+
+    .nft-name {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 20%;
+      width: 100%;
+      font-size: 1.3rem;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .nft-name-text {
+      font-weight: 600;
+      margin-left: 1.5rem;
+    }
+
+    .nft-info {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 20%;
+      width: 100%;
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+    }
+
+    .nft-desc {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .nft-numbers {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 20%;
+      width: 100%;
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+      margin-top: 20px;
+    }
+
+    .nft-emblem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 10%;
+      margin-left: 16px;
+      padding: 0;
+    }
+
+    .nft-price {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      width: 25%;
+      margin-right: 2rem;
+    }
+
+    .nft-price-text {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .clock-emblem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 10%;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .nft-time {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+      width: 25%;
+      margin-right: 2rem;
+    }
+
+    .nft-time-text {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .card-creator {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      color: hsl(215, 51%, 70%);
+      font-weight: 300;
+    }
+
+    .creator-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 10%;
+      margin-left: 2rem;
+      padding: 0;
+    }
+
+    .creator-image {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .creator-name {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 100%;
+      width: 90%;
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .creator-name-text-white {
+      margin-left: 4px;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .line {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1.5rem;
+      height: 1px;
+      width: 100%;
+      background-color: hsl(215, 51%, 70%);
+      opacity: 0.2;
+      margin-top: 24px;
+      width: 80%;
+    }
 
   </style>
 </head>
 <body>
+  <div class="flex-container">
+    <div class="nft-card">
+      <div class="card-image-container">
+        <img src="images\image-equilibrium.jpg" class="card-image" />
+      </div>
+      <div class="card-info-container">
+        <div class="nft-name">
+          <p class="nft-name-text">Equilibrium #3429</p>
+        </div>
+        <div class="nft-info">
+          <p class="nft-desc">Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="nft-numbers">
+          <div class="nft-emblem">
+            <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
+          </div>
+          <div class="nft-price">
+            <p class="nft-price-text">0.041 ETH</p>
+          </div>
+          <div class="clock-emblem">
+            <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
 
+          </div>
+          <div class="nft-time">
+            <p class="nft-time-text">3 days left</p>
+          </div>
+        </div>
+
+        <div class="line">
+        </div>
+      
+        <div class="card-creator">
+          <div class="creator-image-container">
+            <img src="images/image-avatar.png" class="creator-image" />
+          </div>
+          <div class="creator-name">
+            <p class="creator-name-text">Creation of</p>
+            <p class="creator-name-text-white">Jules Wyvern</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
