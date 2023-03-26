@@ -32,8 +32,8 @@
     .nft-card {
       display: flex;
       flex-direction: column;
-      height: 80%;
-      width: 80%;
+      height: 540px;
+      width: 320px;
       background-color: hsl(216, 50%, 16%);
       border-radius: 10px;
     }
@@ -47,22 +47,27 @@
     }
 
     .card-image {
-      height: 85%;
-      width: 85%;
+      height: 270px;
+      width: 270px;
       border-radius: 8px;
+    }
+
+    .card-image:hover {
+      cursor: pointer;
+      
     }
 
     .card-info-container {
       display: flex;
       flex-direction: column;
-      height: 50%;
+      height: 40%;
       width: 100%;
     }
 
     .nft-name {
       display: flex;
       justify-content: start;
-      align-items: center;
+      align-items: flex-end;
       height: 20%;
       width: 100%;
       font-size: 1.3rem;
@@ -71,7 +76,7 @@
 
     .nft-name-text {
       font-weight: 600;
-      margin-left: 1.5rem;
+      margin-left: 25px;
     }
 
     .nft-info {
@@ -82,6 +87,7 @@
       width: 100%;
       color: hsl(215, 51%, 70%);
       font-weight: 300;
+      margin-left: 2px;
     }
 
     .nft-desc {
@@ -98,7 +104,7 @@
       width: 100%;
       color: hsl(215, 51%, 70%);
       font-weight: 300;
-      margin-top: 20px;
+      margin-top: 5px;
     }
 
     .nft-emblem {
@@ -128,6 +134,8 @@
       text-align: left;
       padding: 0;
       margin: 0;
+      font-weight: 700;
+      color: hsl(178, 100%, 50%);
     }
 
 
@@ -137,8 +145,9 @@
       align-items: center;
       height: 100%;
       width: 10%;
-      margin: 0;
+      margin-left: 20px;
       padding: 0;
+      margin-top: 1px;
     }
 
 
@@ -158,7 +167,7 @@
       width: 100%;
       text-align: left;
       padding: 0;
-      margin: 0;
+      margin-left: 5px;
     }
 
 
@@ -183,8 +192,8 @@
     }
 
     .creator-image {
-      height: 40px;
-      width: 40px;
+      height: 30px;
+      width: 30px;
       border-radius: 50%;
       border: 2px solid white;
     }
@@ -208,14 +217,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 1.5rem;
+      margin-left: 25px;
       height: 1px;
-      width: 100%;
+      width: 265px;
       background-color: hsl(215, 51%, 70%);
       opacity: 0.2;
-      margin-top: 24px;
-      width: 80%;
+      margin-top: 5px;
     }
+
+
 
   </style>
 </head>
